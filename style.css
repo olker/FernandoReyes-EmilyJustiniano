@@ -1,0 +1,83 @@
+.continer{
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;/*a partir de esta linea, cada linea con "*" es obligatorio para que funcione el grid*/
+	grid-gap: 20px;
+	grid-template-columns: repeat(3,1fr);/* "*" */
+	grid-template-rows: repeat(5, auto);/* "*" */
+	grid-template-areas: "header header header"
+	                     "section-1 section-1 menu-derecha"
+	                     "section-2 section-2 menu-derecha"
+	                     "menu-largo menu-largo menu-largo"
+	                     "footer footer footer"
+}
+.continer .header{
+	padding: 10px;
+	border-radius: 4px;
+	border: solid 1px black;
+	grid-area: header;
+	background: #f8764e;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.continer .section-1{
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: section-1;/* "*" */
+	border: solid 1px black;
+	background: #da2644;
+	font-size: 24px;
+}
+
+.continer .menu-derecha{
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: menu-derecha;
+	border: solid 1px black;
+	background: #90044a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-derecha img{
+	width: 300px;
+	border-radius: 25px;
+}
+.continer .section-2{
+	border-radius: 4px;
+	grid-area: section-2;/* "*" */
+	border: solid 1px black;
+	background: #ff5f7c;
+	font-size: 24px;
+}
+.creadores {
+	background-color: #fe9393;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: #333;
+	margin: 20px auto;
+	width: 80%;
+  }
+.continer .menu-largo{
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: menu-largo;/* "*" */
+	border: solid 1px black;
+	background: #fe9393;
+	font-size: 24px;
+}
+.continer .footer{
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: footer;/* "*" */
+	border: solid 1px black;
+	background: hotpink;
+	font-size: 24px;
+}
